@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>Person Details</title>
+</h:head>
+<h:body>
+	<ui:composition template="/template/layout.xhtml">
+		<ui:define name="content">
+			<div class="container">
+				<h2>Person Details</h2>
+				<h:form class="form-horizontal" id="personForm">
+					<h:panelGrid columns="2">
+						<h:outputLabel value="Imię:" for="fName" />
+						<h:outputText id="fName"
+							value="#{personController.formPerson.firstName}" />
+					</h:panelGrid>
+					<h:commandButton action="#{personController.showPersonList}"
+						value="Back" styleClass="btn btn-default" />
+				</h:form>
+			</div>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

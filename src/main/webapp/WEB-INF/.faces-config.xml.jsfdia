@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:*" PATH="*" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:*:0" NAME="item" PATH="*" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="personForm::#person#personForm.xhtml"
+    NAME="output" PATH="/person/personForm.xhtml"
+    TARGET="rules:#person#personForm.xhtml" TITLE="personForm" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="personDetails::#person#personDetails.xhtml"
+    NAME="output1" PATH="/person/personDetails.xhtml"
+    TARGET="rules:#person#personDetails.xhtml" TITLE="personDetails" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="personList::#person#personList.xhtml"
+    NAME="output2" PATH="/person/personList.xhtml"
+    TARGET="rules:#person#personList.xhtml" TITLE="personList" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#person#personDetails.xhtml"
+  PATH="/person/personDetails.xhtml" SHAPE="256,177,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#person#personForm.xhtml"
+  PATH="/person/personForm.xhtml" SHAPE="256,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#person#personList.xhtml"
+  PATH="/person/personList.xhtml" SHAPE="272,321,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>
