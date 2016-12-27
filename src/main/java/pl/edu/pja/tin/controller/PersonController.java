@@ -39,7 +39,7 @@ public class PersonController implements Serializable {
 	}
 
 	public String showPersonList() {
-//		this.personList = pService.getAllPersons();
+		// this.personList = pService.getAllPersons();
 		return "personList";
 	}
 
@@ -54,18 +54,19 @@ public class PersonController implements Serializable {
 		resetControllerState();
 		return "personList";
 	}
-	
+
 	public void resetControllerState() {
 		this.formPerson = null;
 		this.personList = null;
 	}
-	
+
 	public List<Person> getPersonList() {
-		if(this.personList == null) {
+		if (this.personList == null || this.personList.size() == 0) {
 			this.personList = pService.getAllPersons();
 		}
 		return personList;
 	}
+
 	public Person getFormPerson() {
 		return formPerson;
 	}

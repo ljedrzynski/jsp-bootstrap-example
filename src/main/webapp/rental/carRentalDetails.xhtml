@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>CarRental Details</title>
+</h:head>
+<h:body>
+	<ui:composition template="/template/layout.xhtml">
+		<ui:define name="content">
+			<div class="container">
+				<h2>CarRental Details</h2>
+<!-- 				<h:form class="form-horizontal" id="carRentalForm"> -->
+<!-- 					<h:panelGrid columns="2"> -->
+<!-- 						<h:outputLabel value="Start Date" for="fStartDate" /> -->
+<!-- 						<h:outputText id="fStartDate" -->
+<!-- 							value="#{carRentalController.formCarRental.startDate}" /> -->
+<!-- 					</h:panelGrid> -->
+<!-- 					<h:panelGrid columns="2"> -->
+<!-- 						<h:outputLabel value="End Date:" -->
+<!-- 							for="fEndDate" /> -->
+<!-- 						<h:outputText id="fEndDate" -->
+<!-- 							value="#{carRentalController.formCarRental.EndDate}" /> -->
+<!-- 					</h:panelGrid> -->
+<!-- 					<h:panelGrid columns="2"> -->
+<!-- 						<h:outputLabel value="Class:" for="fClass" /> -->
+<!-- 						<h:outputText id="fClass" -->
+<!-- 							value="#{carRentalController.formCarRental.carRentalClass}" /> -->
+<!-- 					</h:panelGrid> -->
+<!-- 					<h:panelGrid columns="2"> -->
+<!-- 						<h:outputLabel value="Engine Power:" for="fEnginePower" /> -->
+<!-- 						<h:outputText id="fEnginePower" -->
+<!-- 							value="#{carRentalController.formCarRental.enginePower}" /> -->
+<!-- 					</h:panelGrid> -->
+					
+					<h:commandButton action="#{carRentalController.showCarRentalList}" value="Back"
+						styleClass="btn btn-default" />
+				</h:form>
+			</div>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

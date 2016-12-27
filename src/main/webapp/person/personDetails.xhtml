@@ -12,11 +12,31 @@
 				<h2>Person Details</h2>
 				<h:form class="form-horizontal" id="personForm">
 					<h:panelGrid columns="2">
-						<h:outputLabel value="Imię:" for="fName" />
+						<h:outputLabel value="Name:" for="fName" />
 						<h:outputText id="fName"
 							value="#{personController.formPerson.firstName}" />
 					</h:panelGrid>
-					<h:commandButton action="#{personController.showPersonList}"
+					<h:panelGrid columns="2">
+						<h:outputLabel value="LastName" for="fLastName" />
+						<h:outputText id="fLastName"
+							value="#{personController.formPerson.lastName}" />
+					</h:panelGrid>
+					<h:panelGrid columns="2">
+						<h:outputLabel value="Birthdate:" for="fBirthDate" />
+						<h:outputText id="fBirthDate"
+							value="#{personController.formPerson.dateOfBirth}" />
+					</h:panelGrid>
+					<h:panelGrid columns="2">
+						<h:outputLabel value="Sex:" for="fSex" />
+						<h:outputText id="fSex"
+							value="#{personController.formPerson.sex}" />
+					</h:panelGrid>
+					<h:panelGrid columns="2">
+						<h:outputLabel value="PESEL:" for="fPesel" />
+						<h:outputText id="fPesel"
+							value="#{personController.formPerson.pesel}" />
+					</h:panelGrid>
+					<h:commandButton onclick="history.back()"
 						value="Back" styleClass="btn btn-default" />
 				</h:form>
 			</div>

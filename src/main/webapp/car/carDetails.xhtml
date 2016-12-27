@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>Car Details</title>
+</h:head>
+<h:body>
+	<ui:composition template="/template/layout.xhtml">
+		<ui:define name="content">
+			<div class="container">
+				<h2>Car Details</h2>
+				<h:form class="form-horizontal" id="carForm">
+					<h:panelGrid columns="2">
+						<h:outputLabel value="Make:" for="fMake" />
+						<h:outputText id="fMake" value="#{carController.formCar.make}" />
+					</h:panelGrid>
+					<h:panelGrid columns="2">
+						<h:outputLabel value="Model:" for="fModel" />
+						<h:outputText id="fModel" value="#{carController.formCar.model}" />
+					</h:panelGrid>
+					<h:panelGrid columns="2">
+						<h:outputLabel value="Production Date:" for="fProductionDate" />
+						<h:outputText id="fProductionDate"
+							value="#{carController.formCar.productionDate}" />
+					</h:panelGrid>
+					<h:panelGrid columns="2">
+						<h:outputLabel value="First Registration Date:"
+							for="fFirstRegistrationDate" />
+						<h:outputText id="fFirstRegistrationDate"
+							value="#{carController.formCar.firstRegistrationDate}" />
+					</h:panelGrid>
+					<h:panelGrid columns="2">
+						<h:outputLabel value="Class:" for="fClass" />
+						<h:outputText id="fClass"
+							value="#{carController.formCar.carClass}" />
+					</h:panelGrid>
+					<h:panelGrid columns="2">
+						<h:outputLabel value="Engine Power:" for="fEnginePower" />
+						<h:outputText id="fEnginePower"
+							value="#{carController.formCar.enginePower}" />
+					</h:panelGrid>
+					<h:panelGrid columns="2">
+						<h:outputLabel value="Has Air-Condition:" for="fHasAirCondition" />
+						<h:outputText id="fHasAirCondition"
+							value="#{carController.formCar.hasAirCondition}" />
+					</h:panelGrid>
+					<h:panelGrid columns="2">
+						<h:outputLabel value="Gear:" for="fGear" />
+						<h:outputText id="fGear" value="#{carController.formCar.gear}" />
+					</h:panelGrid>
+					<h:commandButton  onclick="history.back()" value="Back"
+						styleClass="btn btn-default" />
+				</h:form>
+			</div>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

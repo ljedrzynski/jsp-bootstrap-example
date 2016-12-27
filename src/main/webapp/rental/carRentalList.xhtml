@@ -1,0 +1,60 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>Car Rental List</title>
+</h:head>
+<h:body>
+	<ui:composition template="/template/layout.xhtml">
+		<ui:define name="content">
+			<div class="container">
+				<h2>Car List</h2>
+				<h:form id="carTableForm">
+					<h:dataTable class="table table-condensed"
+						value="#{carRentalController.carRentalList}" var="_p">
+						<h:column>
+							<f:facet name="header">Person Name:</f:facet>#{_p.person.firstName}</h:column>
+						<h:column>
+							<f:facet name="header">Person Last Name:</f:facet>#{_p.person.lastName}</h:column>
+						<h:column>
+							<f:facet name="header">Person Pesel:</f:facet>#{_p.person.pesel}</h:column>
+						<h:column>
+							<f:facet name="header">Car Make:</f:facet>#{_p.car.make}</h:column>
+						<h:column>
+							<f:facet name="header">Car Model:</f:facet>#{_p.car.model}</h:column>
+						<h:column>
+							<f:facet name="header">Car First Reg.:</f:facet>
+							<h:outputText value="#{_p.car.firstRegistrationDate}">
+								<f:convertDateTime pattern="dd/MM/yyyy" />
+							</h:outputText>
+						</h:column>
+						<h:column>
+							<f:facet name="header">From:</f:facet>
+							<h:outputText value="#{_p.startDate}">
+								<f:convertDateTime pattern="dd/MM/yyyy" />
+							</h:outputText>
+						</h:column>
+						<h:column>
+							<f:facet name="header">To:</f:facet>
+							<h:outputText value="#{_p.endDate}">
+								<f:convertDateTime pattern="dd/MM/yyyy" />
+							</h:outputText>
+						</h:column>
+						<h:column>
+							<f:facet name="header">Actions:</f:facet>
+							<h:commandButton action="#{carController.showCarDetails(_p.car)}"
+								value="Car Details" styleClass="btn btn-default" />
+							<h:commandButton
+								action="#{personController.showPersonDetails(_p.person)}"
+								value="Person Details" styleClass="btn btn-default" />
+						</h:column>
+					</h:dataTable>
+					<h:commandButton action="#{carController.showNewCarForm()}"
+						value="New Car" styleClass="btn btn-default" />
+				</h:form>
+			</div>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

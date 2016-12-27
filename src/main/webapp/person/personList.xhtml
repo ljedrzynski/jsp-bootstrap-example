@@ -16,6 +16,14 @@
 						<h:column>
 							<f:facet name="header">Name:</f:facet>#{_p.firstName}</h:column>
 						<h:column>
+							<f:facet name="header">Last Name:</f:facet>#{_p.lastName}</h:column>
+						<h:column>
+							<f:facet name="header">Birth Date:</f:facet>
+							<h:outputText value="#{_p.dateOfBirth}">
+								<f:convertDateTime pattern="dd/MM/yyyy" />
+							</h:outputText>
+						</h:column>
+						<h:column>
 							<f:facet name="header">Actions:</f:facet>
 							<h:commandButton
 								action="#{personController.showPersonDetails(_p)}"

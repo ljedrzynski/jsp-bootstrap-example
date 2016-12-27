@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>Car List</title>
+</h:head>
+<h:body>
+	<ui:composition template="/template/layout.xhtml">
+		<ui:define name="content">
+			<div class="container">
+				<h2>Car List</h2>
+				<h:form id="carTableForm">
+					<h:dataTable class="table table-condensed"
+						value="#{carController.carList}" var="_p">
+						<h:column>
+							<f:facet name="header">Make:</f:facet>#{_p.make}</h:column>
+						<h:column>
+							<f:facet name="header">Model:</f:facet>#{_p.model}</h:column>
+						<h:column>
+							<f:facet name="header">Production Date:</f:facet>
+							<h:outputText value="#{_p.productionDate}">
+								<f:convertDateTime pattern="dd/MM/yyyy" />
+							</h:outputText>
+						</h:column>
+						<h:column>
+						<f:facet name="header">Actions:</f:facet>
+						<h:commandButton action="#{carController.showCarDetails(_p)}"
+							value="Details" styleClass="btn btn-default" />
+						<h:commandButton action="#{carController.showEditCarForm(_p)}"
+							value="Update" styleClass="btn btn-default" />
+						</h:column>
+					</h:dataTable>
+					<h:commandButton action="#{carController.showNewCarForm()}"
+						value="New Car" styleClass="btn btn-default" />
+				</h:form>
+			</div>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

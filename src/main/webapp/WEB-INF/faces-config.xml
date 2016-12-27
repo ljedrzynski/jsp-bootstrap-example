@@ -36,5 +36,29 @@
 			<from-outcome>personList</from-outcome>
 			<to-view-id>/person/personList.xhtml</to-view-id>
 		</navigation-case>
+        <navigation-case>
+            <from-outcome>carForm</from-outcome>
+            <to-view-id>/car/carForm.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>carDetails</from-outcome>
+            <to-view-id>/car/carDetails.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>carList</from-outcome>
+            <to-view-id>/car/carList.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>carRentalForm</from-outcome>
+            <to-view-id>/rental/carRentalForm.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>carRentalDetails</from-outcome>
+            <to-view-id>/rental/carRentalDetails.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>carRentalList</from-outcome>
+            <to-view-id>/rental/carRentalList.xhtml</to-view-id>
+        </navigation-case>
 	</navigation-rule>
 </faces-config>
